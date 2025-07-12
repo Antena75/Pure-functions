@@ -1,5 +1,4 @@
-export default function getHealthStatus(character) {
-    const { health } = character;
+export default function getHealthStatus({health}) {
 
     if (health > 50) {
         return 'healthy';

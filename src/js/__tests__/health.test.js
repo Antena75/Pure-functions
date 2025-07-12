@@ -1,4 +1,3 @@
-/* global test, expect */
 import getHealthStatus from '../health';
 
     test('should return "healthy" for health > 50', () => {
@@ -14,3 +13,12 @@ import getHealthStatus from '../health';
         expect(getHealthStatus({ name: 'Маг', health: 15 })).toBe('critical');
         expect(getHealthStatus({ name: 'Маг', health: 10 })).toBe('critical');
     });
+
+// test.each([
+//   ["маг", 100, "healthy"],
+//   ["целитель", 50, "wounded"],
+//   ["танк", 3, "critical"],
+// ])("testing function health with a %s character and a health value of %i", (name, health, expected) => {
+//   let healthStatus = getHealthStatus({name, health});
+//   expect(healthStatus).toBe(expected);
+// });
